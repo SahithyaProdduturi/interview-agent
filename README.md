@@ -1,54 +1,61 @@
-# Interview Practice Partner – AI Agent
+# AI Interview Practice Agent
 
-This project is submitted as part of the Agentic AI Internship Assignment.
-
----
-
-### 🎯 Overview
-
-The Interview Practice Partner is an interactive conversational AI agent designed to help users practice job interviews. The agent conducts mock interviews, asks follow-up questions based on user responses, adapts to different user behaviors, and generates structured feedback at the end.
+This project is an AI-powered interview simulator that helps users practice real interview scenarios. The agent asks follow-up questions based on user responses, adapts conversation flow, and generates a personalized feedback report at the end.
 
 ---
 
-### 🛠️ Features
+## Features
 
-- Role-based mock interviews (Software Engineer, Sales, Retail, Data Scientist)
-- Dynamic follow-up questions and adaptive conversation
-- Handles multiple user personas:
-  - Efficient user
-  - Confused user
-  - Chatty user
-  - Edge-case user
-- Generates structured feedback including:
-  - Strengths
-  - Improvements
-  - Suggested actions
-  - Numeric scoring (Communication, Technical, Structure)
-- Saves conversation transcript locally
+- Context-aware conversation using AI memory
+- Custom role, difficulty level, and interviewer personality
+- Dynamic follow-up questions instead of repeated prompts
+- Auto-generated feedback including strengths, improvements, and scoring
+- Smooth user experience with automatic input clearing
+- Simple and clean UI built with Streamlit
 
 ---
 
-### 🧠 Architecture & Design Decisions
+## Tech Stack
 
-- Built using **Streamlit** for user interaction and **OpenAI API** for conversational intelligence.
-- Uses prompt-based logic to simulate realistic interview behavior rather than scripted questioning.
-- The agent uses short-term memory to maintain context while preventing excessive token usage.
-- Feedback is generated in structured JSON format for consistency.
-
----
-
-### 📂 Assignment Reference
-
-The original assignment instructions provided are included in this repository:
-
-`AI Agent Building Assignment - Eightfold.pdf`
+| Component        | Technology              |
+| ---------------- | ----------------------- |
+| Frontend         | Streamlit               |
+| Backend Logic    | Python                  |
+| AI Model         | OpenAI API              |
+| Session Handling | Streamlit Session State |
 
 ---
 
-### 🚀 How to Run
+## Project Structure
 
-#### 1. Create Virtual Environment
+interview_app/
+┣ app.py
+┣ utils.py
+┣ requirements.txt
+┣ README.md
+┗ .gitignore
 
-```bash
+---
+
+## How to Run
+
+1️⃣ Clone Repository  
+git clone https://github.com/YOUR_USERNAME/Interview-AI-Agent.git
+
+cd Interview-AI-Agent
+
+2️⃣ Create Virtual Environment  
 python -m venv venv
-```
+venv\Scripts\activate (Windows)
+source venv/bin/activate (Mac/Linux)
+
+3️⃣ Install Dependencies  
+pip install -r requirements.txt
+
+4️⃣ Add Your OpenAI API Key
+
+Open utils.py and update this line:
+client = OpenAI(api_key="YOUR_API_KEY")
+
+5️⃣ Run the Application  
+streamli run app.py
