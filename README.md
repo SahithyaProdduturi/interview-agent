@@ -40,7 +40,7 @@ interview_app/
 ## How to Run
 
 1️⃣ Clone Repository  
-git clone https://github.com/YOUR_USERNAME/Interview-AI-Agent.git
+git clone https://github.com/SahithyaProdduturi/interview-agent.git
 
 cd Interview-AI-Agent
 
